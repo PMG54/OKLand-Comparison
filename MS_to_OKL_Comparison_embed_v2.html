@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MS to OKL Comparison</title>
+<style>
+/* V2 embed – fully scoped */
+.x2web-embed-ms-okl{font-family:Arial, sans-serif;}
+.x2web-embed-ms-okl *{box-sizing:border-box;}
+.x2web-embed-ms-okl .x2-toolbar{display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin:0 0 10px 0;}
+.x2web-embed-ms-okl .x2-toolbar label{font-size:14px;}
+.x2web-embed-ms-okl input[type="search"]{padding:8px 10px; border:1px solid #cfcfcf; border-radius:8px; min-width:220px;}
+.x2web-embed-ms-okl input[type="range"]{width:160px;}
+.x2web-embed-ms-okl .x2-frame{overflow:auto; max-width:100%; border:1px solid #e5e5e5; border-radius:12px;}
+.x2web-embed-ms-okl .x2-stage{transform-origin: top left;}
+.x2web-embed-ms-okl table{border-collapse:collapse; table-layout:fixed;}
+.x2web-embed-ms-okl td{padding:6px 8px; line-height:1.2; border:1px solid transparent;}
+.x2web-embed-ms-okl mark.x2mark{padding:0 2px; border-radius:3px;}
+.x2web-embed-ms-okl .x2c-10178994{background:#F2F2F2;border-bottom:1px solid #000000;border-left:1px solid #000000;border-right:1px solid #000000;border-top:1px solid #000000;font-family:Arial;font-size:18.0pt;font-weight:700;text-align:center;vertical-align:middle;white-space:pre}
+.x2web-embed-ms-okl .x2c-6587f8e6{border-bottom:1px solid #000000;border-top:1px solid #000000;color:#000000;font-family:Arial;font-size:11.0pt;white-space:pre}
+.x2web-embed-ms-okl .x2c-eaffe00c{border-bottom:1px solid #000000;border-right:1px solid #000000;border-top:1px solid #000000;color:#000000;font-family:Arial;font-size:11.0pt;white-space:pre}
+.x2web-embed-ms-okl .x2c-e34fa8e1{background:#E7E9EC;border-bottom:1px solid #000000;border-left:1px solid #000000;border-right:1px solid #000000;border-top:1px solid #000000;font-family:Arial;font-size:18.0pt;font-weight:700;text-align:center;vertical-align:middle;white-space:pre}
+.x2web-embed-ms-okl .x2c-a6527a85{border-bottom:1px solid #000000;border-left:1px solid #000000;border-right:1px solid #000000;border-top:1px solid #000000;font-family:Arial;font-size:14.0pt;text-align:center;vertical-align:middle;white-space:pre}
+.x2web-embed-ms-okl .x2c-d06f5dba{background:#E7E9EC;border-left:1px solid #000000;border-right:1px solid #000000;border-top:1px solid #000000;font-family:Arial;font-size:14.0pt;font-weight:700;text-align:center;vertical-align:middle;white-space:pre-wrap}
+.x2web-embed-ms-okl .x2c-c1ca410c{border-left:1px solid #000000;border-right:1px solid #000000;border-top:1px solid #000000;font-family:Arial;font-size:16.0pt;font-weight:700;text-align:center;vertical-align:middle;white-space:pre}
+.x2web-embed-ms-okl .x2c-5a4c3daf{border-top:1px solid #000000;color:#000000;font-family:Arial;font-size:11.0pt;white-space:pre}
+.x2web-embed-ms-okl .x2c-de54181a{border-right:1px solid #000000;border-top:1px solid #000000;color:#000000;font-family:Arial;font-size:11.0pt;white-space:pre}
+.x2web-embed-ms-okl .x2c-909098b0{border-left:1px solid #000000;border-right:1px solid #000000;color:#000000;font-family:Arial;font-size:11.0pt;white-space:pre}
+.x2web-embed-ms-okl .x2c-76dc85b9{border-left:1px solid #000000;color:#000000;font-family:Arial;font-size:11.0pt;white-space:pre}
+.x2web-embed-ms-okl .x2c-533b1a28{color:#000000;font-family:Arial;font-size:11.0pt;white-space:pre}
+.x2web-embed-ms-okl .x2c-7f379df7{border-right:1px solid #000000;color:#000000;font-family:Arial;font-size:11.0pt;white-space:pre}
+.x2web-embed-ms-okl .x2c-2a4b8e96{background:#F2F2F2;border-bottom:1px solid #000000;border-left:1px solid #000000;border-right:1px solid #000000;border-top:1px solid #000000;font-family:Arial;font-size:14.0pt;font-weight:700;text-align:center;vertical-align:middle;white-space:pre-wrap}
+.x2web-embed-ms-okl .x2c-bb6d7862{border-bottom:1px solid #000000;border-left:1px solid #000000;border-right:1px solid #000000;border-top:1px solid #000000;font-family:Arial;font-size:14.0pt;text-align:left;vertical-align:middle;white-space:pre-wrap}
+.x2web-embed-ms-okl .x2c-2989915e{background:#E7E9EC;border-bottom:1px solid #000000;border-left:1px solid #000000;border-right:1px solid #000000;border-top:1px solid #000000;font-family:Arial;font-size:14.0pt;font-weight:700;text-align:center;vertical-align:middle;white-space:pre-wrap}
+.x2web-embed-ms-okl .x2c-74d13b23{background:#F2F2F2;border-bottom:1px solid #000000;border-left:1px solid #000000;border-right:1px solid #000000;border-top:1px solid #000000;color:#000000;font-family:Arial;font-size:14.0pt;font-weight:700;text-align:center;vertical-align:middle;white-space:pre-wrap}
+.x2web-embed-ms-okl .x2c-7972fd79{border-bottom:1px solid #000000;border-left:1px solid #000000;font-family:Arial;font-size:12.0pt;vertical-align:middle;white-space:pre}
+.x2web-embed-ms-okl .x2c-a3b1066e{border-bottom:1px solid #000000;border-right:1px solid #000000;font-family:Arial;font-size:14.0pt;font-weight:700;text-align:center;vertical-align:middle;white-space:pre-wrap}
+.x2web-embed-ms-okl .x2c-f6571fd9{border-bottom:1px solid #000000;color:#000000;font-family:Arial;font-size:11.0pt;white-space:pre}
+.x2web-embed-ms-okl .x2c-8578afbc{border-bottom:1px solid #000000;border-right:1px solid #000000;color:#000000;font-family:Arial;font-size:11.0pt;white-space:pre}
+.x2web-embed-ms-okl .x2c-8acd63cc{background:#E7E9EC;border-bottom:1px solid #000000;border-left:1px solid #000000;border-right:1px solid #000000;font-family:Arial;font-size:14.0pt;font-weight:700;text-align:center;vertical-align:middle;white-space:pre-wrap}
+.x2web-embed-ms-okl .x2c-9bf681e3{font-family:Arial;font-size:12.0pt;vertical-align:middle;white-space:pre}
+.x2web-embed-ms-okl .x2c-f7427488{background:#E7E9EC;border-bottom:1px solid #000000;border-left:1px solid #000000;border-right:1px solid #000000;border-top:1px solid #000000;font-family:Arial;font-size:14.0pt;font-weight:700;text-align:left;vertical-align:middle;white-space:pre}
+.x2web-embed-ms-okl .x2c-3a7587cd{font-family:Arial;font-size:16.0pt;text-align:left;vertical-align:middle;white-space:pre}
+.x2web-embed-ms-okl .x2c-2117681d{background:#E7E9EC;border-right:1px solid #000000;border-top:1px solid #000000;font-family:Arial;font-size:18.0pt;font-weight:700;text-align:center;vertical-align:middle;white-space:pre}
+.x2web-embed-ms-okl .x2c-9f2a6105{border-bottom:1px solid #000000;border-left:1px solid #000000;border-right:1px solid #000000;font-family:Arial;font-size:12.0pt;text-align:center;vertical-align:middle;white-space:pre-wrap}
+.x2web-embed-ms-okl .x2c-5623cfca{background:#E7E9EC;border-bottom:1px solid #000000;border-left:1px solid #000000;border-right:1px solid #000000;border-top:1px solid #000000;font-family:Arial;font-size:14.0pt;font-weight:700;text-align:center;vertical-align:middle;white-space:pre}
+.x2web-embed-ms-okl .x2c-8c8e8bda{border-bottom:1px solid #000000;border-left:1px solid #000000;border-right:1px solid #000000;border-top:1px solid #000000;font-family:Arial;font-size:12.0pt;text-align:center;vertical-align:middle;white-space:pre-wrap}
+.x2web-embed-ms-okl .x2c-b466b55b{background:#E7E9EC;border-left:1px solid #000000;border-right:1px solid #000000;border-top:1px solid #000000;font-family:Arial;font-size:14.0pt;font-weight:700;text-align:center;vertical-align:middle;white-space:pre}
+.x2web-embed-ms-okl .x2c-c306a684{background:#E7E9EC;border-bottom:1px solid #000000;border-left:1px solid #000000;border-right:1px solid #000000;font-family:Arial;font-size:14.0pt;font-weight:700;text-align:center;vertical-align:middle;white-space:pre}
+.x2web-embed-ms-okl .x2c-299b90a1{border-bottom:1px solid #000000;border-left:1px solid #000000;border-right:1px solid #000000;color:#000000;font-family:Arial;font-size:11.0pt;white-space:pre}
+.x2web-embed-ms-okl .x2c-9a61300d{color:#000000;font-family:Arial;font-size:16.0pt;font-weight:700;text-align:center;vertical-align:middle;white-space:pre-wrap}
+.x2web-embed-ms-okl .x2c-e2831a5a{background:#E7E9EC;border-bottom:1px solid #000000;border-left:1px solid #000000;border-right:1px solid #000000;border-top:1px solid #000000;font-family:Arial;font-size:16.0pt;font-weight:700;text-align:center;vertical-align:middle;white-space:pre}
+
+/* sticky top header rows (1–4) */
+.x2web-embed-ms-okl tr[data-row="1"] td{position:sticky; top:0px; z-index:5;}
+.x2web-embed-ms-okl tr[data-row="2"] td{position:sticky; top:44px; z-index:5;}
+.x2web-embed-ms-okl tr[data-row="3"] td{position:sticky; top:88px; z-index:5;}
+.x2web-embed-ms-okl tr[data-row="4"] td{position:sticky; top:132px; z-index:5;}
+
+/* keep sticky rows visually solid when scrolling */
+.x2web-embed-ms-okl tr[data-row="1"] td,
+.x2web-embed-ms-okl tr[data-row="2"] td,
+.x2web-embed-ms-okl tr[data-row="3"] td,
+.x2web-embed-ms-okl tr[data-row="4"] td{background:#F2F2F2;}
+</style>
+</head>
+<body>
+<div class="x2web-embed-ms-okl" role="region" aria-label="MS to OKL Comparison (Excel replica)">
+  <div class="x2-toolbar">
+    <label>
+      Search:
+      <input id="x2-search" type="search" placeholder="Type to find text…" autocomplete="off"/>
+    </label>
+    <label>
+      Zoom:
+      <input id="x2-zoom" type="range" min="70" max="130" value="100"/>
+      <span id="x2-zoom-val">100%</span>
+    </label>
+    <button id="x2-reset" type="button" style="padding:8px 10px;border:1px solid #cfcfcf;border-radius:8px;background:#fff;cursor:pointer;">Reset</button>
+  </div>
+
+  <div class="x2-frame">
+    <div class="x2-stage" id="x2-stage">
+      <table role="table" aria-label="Converted Excel table">
+        <colgroup>
+          <col style="width:145px"/><col style="width:197px"/><col style="width:216px"/><col style="width:234px"/><col style="width:185px"/>
+        </colgroup>
+        <tr data-row="1" style="height:44px">
+<td class="x2c-10178994" colspan="4" data-x2text="Megadyne MEGA SOFT™ Catalog # Coding quick reference for PRE Pads.">Megadyne MEGA SOFT™ Catalog # Coding quick reference for PRE Pads.</td>
+<td class="x2c-e34fa8e1" data-x2text=" OKLand®">&nbsp;OKLand®</td>
+</tr>
+<tr data-row="2" style="height:44px">
+<td class="x2c-a6527a85" colspan="4" data-x2text="1st 4 digits = PAD: 0845 = 0.118&quot; Single , 0846 = 0.125&quot; Dual , 0847 = 0.25&quot; Single ,  0848 = 0.25&quot; Dual">1st 4 digits = PAD: 0845 = 0.118&quot; Single , 0846 = 0.125&quot; Dual , 0847 = 0.25&quot; Single ,&nbsp; 0848 = 0.25&quot; Dual</td>
+<td class="x2c-d06f5dba" rowspan="3" data-x2text="ALL Products are
+0.5&quot; Thick with the
+same weight rating.">ALL Products are<br>0.5&quot; Thick with the<br>same weight rating.</td>
+</tr>
+<tr data-row="3" style="height:44px">
+<td class="x2c-c1ca410c" rowspan="2" colspan="4" data-x2text="Equivalent Replacement for MEGA SOFT™ Products:">Equivalent Replacement for MEGA SOFT™ Products:</td>
+</tr>
+<tr data-row="4" style="height:44px">
+</tr>
+<tr data-row="5" style="height:117px">
+<td class="x2c-2a4b8e96" data-x2text="0846M2K01-9
+
+0848M2K01-9">0846M2K01-9<br><br>0848M2K01-9</td>
+<td class="x2c-bb6d7862" colspan="3" data-x2text="    MEGA SOFT™ Universal Plus — 36 × 20 in, 0.125 in, DUAL-CORD
+
+    MEGA SOFT™ Universal Plus — 36 × 20 in, 0.25 in, DUAL-CORD">&nbsp; &nbsp; MEGA SOFT™ Universal Plus — 36 × 20 in, 0.125 in, DUAL-CORD<br><br>&nbsp; &nbsp; MEGA SOFT™ Universal Plus — 36 × 20 in, 0.25 in, DUAL-CORD</td>
+<td class="x2c-2989915e" data-x2text="AHD-004
+47 × 20 in, 0.50 in">AHD-004<br>47 × 20 in, 0.50 in</td>
+</tr>
+<tr data-row="6" style="height:117px">
+<td class="x2c-74d13b23" data-x2text="0845M2K01-9
+
+0847M2K01-9">0845M2K01-9<br><br>0847M2K01-9</td>
+<td class="x2c-bb6d7862" colspan="3" data-x2text="    MEGA SOFT™ Universal — 36 × 20 in, 0.118 in, SINGLE-CORD
+
+    MEGA SOFT™ Universal Plus — 36 × 20 in, 0.25 in, SINGLE-CORD">&nbsp; &nbsp; MEGA SOFT™ Universal — 36 × 20 in, 0.118 in, SINGLE-CORD<br><br>&nbsp; &nbsp; MEGA SOFT™ Universal Plus — 36 × 20 in, 0.25 in, SINGLE-CORD</td>
+<td class="x2c-2989915e" data-x2text="AHD-005
+39 × 20 in, 0.50 in">AHD-005<br>39 × 20 in, 0.50 in</td>
+</tr>
+<tr data-row="7" style="height:117px">
+<td class="x2c-7972fd79" data-x2text="">&nbsp;</td>
+<td class="x2c-a3b1066e" colspan="3" data-x2text="Additional OKLand® Sizes Are Also Available.    See Product List.">Additional OKLand® Sizes Are Also Available.&nbsp; &nbsp; See Product List.</td>
+<td class="x2c-8acd63cc" data-x2text="AHD-001
+AHD-002
+AHD-003">AHD-001<br>AHD-002<br>AHD-003</td>
+</tr>
+<tr data-row="8" style="height:44px">
+<td class="x2c-9bf681e3" data-x2text="">&nbsp;</td>
+<td class="x2c-9bf681e3" data-x2text="">&nbsp;</td>
+<td class="x2c-9bf681e3" data-x2text="">&nbsp;</td>
+<td class="x2c-9bf681e3" data-x2text="">&nbsp;</td>
+<td class="x2c-9bf681e3" data-x2text="">&nbsp;</td>
+</tr>
+<tr data-row="9" style="height:44px">
+<td class="x2c-f7427488" colspan="5" data-x2text=" OKLand® cables are listed separately. * Please reference our ESU Compatibility Reference Guide for proper cable selection.">&nbsp;OKLand® cables are listed separately. * Please reference our ESU Compatibility Reference Guide for proper cable selection.</td>
+</tr>
+<tr data-row="10" style="height:44px">
+<td class="x2c-3a7587cd" data-x2text="">&nbsp;</td>
+<td class="x2c-3a7587cd" data-x2text="">&nbsp;</td>
+<td class="x2c-3a7587cd" data-x2text="">&nbsp;</td>
+<td class="x2c-3a7587cd" data-x2text="">&nbsp;</td>
+<td class="x2c-3a7587cd" data-x2text="">&nbsp;</td>
+</tr>
+<tr data-row="11" style="height:44px">
+<td class="x2c-10178994" colspan="4" data-x2text="MEGA SOFT™ Catalog # Coding quick reference for Connecting Cables.">MEGA SOFT™ Catalog # Coding quick reference for Connecting Cables.</td>
+<td class="x2c-2117681d" data-x2text=" OKLand®">&nbsp;OKLand®</td>
+</tr>
+<tr data-row="12" style="height:44px">
+<td class="x2c-a6527a85" colspan="4" data-x2text="Last 5 digits = CABLE: M2K01 - M2K09">Last 5 digits = CABLE: M2K01 - M2K09</td>
+<td class="x2c-e34fa8e1" data-x2text="">&nbsp;</td>
+</tr>
+<tr data-row="13" style="height:44px">
+<td class="x2c-74d13b23" data-x2text="M2K01">M2K01</td>
+<td class="x2c-9f2a6105" colspan="3" data-x2text="MEGADYNE™ Mega Soft Reusable DetachaCable™ Cord, Standard Connector, 2.4m (8.0 ft.)">MEGADYNE™ Mega Soft Reusable DetachaCable™ Cord, Standard Connector, 2.4m (8.0 ft.)</td>
+<td class="x2c-5623cfca" data-x2text="CC-01">CC-01</td>
+</tr>
+<tr data-row="14" style="height:44px">
+<td class="x2c-74d13b23" data-x2text="M2K02  ">M2K02&nbsp;&nbsp;</td>
+<td class="x2c-8c8e8bda" colspan="3" data-x2text="Standard Connector, 4.4 m (14.4 ft.)">Standard Connector, 4.4 m (14.4 ft.)</td>
+<td class="x2c-5623cfca" data-x2text="CC-01">CC-01</td>
+</tr>
+<tr data-row="15" style="height:44px">
+<td class="x2c-74d13b23" data-x2text="M2K03  ">M2K03&nbsp;&nbsp;</td>
+<td class="x2c-8c8e8bda" colspan="3" data-x2text="Phone Plug Connector, 2.4 m (8.0 ft.), same as B-205 adapter">Phone Plug Connector, 2.4 m (8.0 ft.), same as B-205 adapter</td>
+<td class="x2c-5623cfca" data-x2text="CC-03">CC-03</td>
+</tr>
+<tr data-row="16" style="height:44px">
+<td class="x2c-74d13b23" data-x2text="M2K04  ">M2K04&nbsp;&nbsp;</td>
+<td class="x2c-8c8e8bda" colspan="3" data-x2text="Phone Plug Connector, 4.4 m (14.4 ft.), same as B-205 adapter">Phone Plug Connector, 4.4 m (14.4 ft.), same as B-205 adapter</td>
+<td class="x2c-5623cfca" data-x2text="CC-03">CC-03</td>
+</tr>
+<tr data-row="17" style="height:44px">
+<td class="x2c-74d13b23" data-x2text="M2K05  ">M2K05&nbsp;&nbsp;</td>
+<td class="x2c-8c8e8bda" colspan="3" data-x2text="DetachaCable™ Cord, Extended Phone Plug Connector, 4.4m (14.4 ft.)">DetachaCable™ Cord, Extended Phone Plug Connector, 4.4m (14.4 ft.)</td>
+<td class="x2c-5623cfca" data-x2text="CC-03 (possible)">CC-03 (possible)</td>
+</tr>
+<tr data-row="18" style="height:44px">
+<td class="x2c-74d13b23" data-x2text="M2K06">M2K06</td>
+<td class="x2c-8c8e8bda" colspan="3" data-x2text="Argon Beam Connector, 2.4 m (8.0 ft.), same as A-238 adapter">Argon Beam Connector, 2.4 m (8.0 ft.), same as A-238 adapter</td>
+<td class="x2c-5623cfca" data-x2text="NA">NA</td>
+</tr>
+<tr data-row="19" style="height:44px">
+<td class="x2c-74d13b23" data-x2text="M2K07">M2K07</td>
+<td class="x2c-8c8e8bda" colspan="3" data-x2text="Mega Soft Replacement Cord, 0.6 m (2.0 ft.)">Mega Soft Replacement Cord, 0.6 m (2.0 ft.)</td>
+<td class="x2c-5623cfca" data-x2text="NA">NA</td>
+</tr>
+<tr data-row="20" style="height:44px">
+<td class="x2c-74d13b23" data-x2text="M2K08">M2K08</td>
+<td class="x2c-8c8e8bda" colspan="3" data-x2text="DetachaCable™ Cord, Compatibility, 2.4m (8.0 ft.)">DetachaCable™ Cord, Compatibility, 2.4m (8.0 ft.)</td>
+<td class="x2c-5623cfca" data-x2text="NA">NA</td>
+</tr>
+<tr data-row="21" style="height:44px">
+<td class="x2c-74d13b23" data-x2text="M2K09">M2K09</td>
+<td class="x2c-8c8e8bda" colspan="3" data-x2text="Compatibility Cable, MEGA SOFT® 4.4m (14.4 ft.)">Compatibility Cable, MEGA SOFT® 4.4m (14.4 ft.)</td>
+<td class="x2c-5623cfca" data-x2text="NA">NA</td>
+</tr>
+<tr data-row="22" style="height:47px">
+<td class="x2c-b466b55b" colspan="4" data-x2text="NOTE: These cables may be obsolete as adapters were commonly used with M2K08-09.">NOTE: These cables may be obsolete as adapters were commonly used with M2K08-09.</td>
+<td class="x2c-5623cfca" rowspan="2" data-x2text="CC-06*">CC-06*</td>
+</tr>
+<tr data-row="23" style="height:47px">
+<td class="x2c-c306a684" colspan="4" data-x2text="Modern ESUs are now using Dual Pole (REM) cables. The most common OKLand® cable is:">Modern ESUs are now using Dual Pole (REM) cables. The most common OKLand® cable is:</td>
+</tr>
+<tr data-row="24" style="height:44px">
+<td class="x2c-9a61300d" data-x2text="">&nbsp;</td>
+<td class="x2c-9bf681e3" data-x2text="">&nbsp;</td>
+<td class="x2c-9bf681e3" data-x2text="">&nbsp;</td>
+<td class="x2c-9bf681e3" data-x2text="">&nbsp;</td>
+<td class="x2c-9bf681e3" data-x2text="">&nbsp;</td>
+</tr>
+<tr data-row="25" style="height:44px">
+<td class="x2c-e2831a5a" colspan="5" data-x2text="These Equivalent Replacements are estimates.  OKLand® also offers Dual Pole cables. ">These Equivalent Replacements are estimates.&nbsp; OKLand® also offers Dual Pole cables.&nbsp;</td>
+</tr>
+<tr data-row="26" style="height:44px">
+<td class="x2c-e2831a5a" colspan="5" data-x2text="* Please verify using our ESU Compatibility Reference Guide for proper cable selection.">* Please verify using our ESU Compatibility Reference Guide for proper cable selection.</td>
+</tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  const root = document.querySelector('.x2web-embed-ms-okl');
+  const search = root.querySelector('#x2-search');
+  const zoom = root.querySelector('#x2-zoom');
+  const zoomVal = root.querySelector('#x2-zoom-val');
+  const resetBtn = root.querySelector('#x2-reset');
+  const stage = root.querySelector('#x2-stage');
+  const rows = Array.from(root.querySelectorAll('tr[data-row]'));
+  const headerRows = new Set([1,2,3,4]);
+
+  // cache original HTML for highlight reset
+  const tds = Array.from(root.querySelectorAll('td'));
+  tds.forEach(td => {
+    td.dataset.x2html = td.innerHTML;
+  });
+
+  function setZoom(pct){
+    const s = pct/100;
+    stage.style.transform = 'scale(' + s + ')';
+    zoomVal.textContent = pct + '%';
+  }
+
+  function clearHighlights(){
+    tds.forEach(td => {
+      if (td.dataset.x2html !== undefined) td.innerHTML = td.dataset.x2html;
+    });
+  }
+
+  function applySearch(q){
+    const query = (q || '').trim().toLowerCase();
+    clearHighlights();
+
+    // show all rows if empty
+    if (!query){
+      rows.forEach(tr => tr.style.display = '');
+      return;
+    }
+
+    rows.forEach(tr => {
+      const r = parseInt(tr.getAttribute('data-row'), 10);
+      if (headerRows.has(r)) {
+        tr.style.display = '';
+        return;
+      }
+
+      const cells = Array.from(tr.querySelectorAll('td'));
+      let rowHit = false;
+
+      cells.forEach(td => {
+        const txt = (td.dataset.x2text || '').toLowerCase();
+        if (!txt) return;
+        const idx = txt.indexOf(query);
+        if (idx !== -1) {
+          rowHit = true;
+
+          // highlight in rendered html (best-effort for text-only cells)
+          const raw = td.dataset.x2text || '';
+          // escape regex special chars
+          const safe = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+          const re = new RegExp(safe, 'ig');
+          const html0 = td.dataset.x2html || td.innerHTML;
+
+          // Only attempt highlight if the cell is mostly text (avoid breaking complex HTML)
+          if (!/<\w+[^>]*>/.test(html0.replace(/<br\s*\/?>/ig, ''))){
+            const replaced = raw.replace(re, m => '<mark class="x2mark">' + m + '</mark>');
+            td.innerHTML = replaced
+              .replace(/\n/g, '<br>')
+              .replace(/  /g, '&nbsp; ')
+              .replace(/^ /, '&nbsp;');
+          }
+        }
+      });
+
+      tr.style.display = rowHit ? '' : 'none';
+    });
+  }
+
+  search.addEventListener('input', (e) => applySearch(e.target.value));
+  zoom.addEventListener('input', (e) => setZoom(parseInt(e.target.value, 10)));
+  resetBtn.addEventListener('click', () => {
+    search.value = '';
+    applySearch('');
+    zoom.value = '100';
+    setZoom(100);
+  });
+
+  // init
+  setZoom(100);
+})();
+</script>
+</body>
+</html>
