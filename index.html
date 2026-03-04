@@ -1,14 +1,58 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-    html, body { margin:0; padding:0; height:100%; }
-    iframe { width:100%; height:100vh; border:0; display:block; }
+    html, body { margin:0; padding:0; width:100%; height:100%; overflow:hidden; }
+    /* Wrapper that always fits the parent iframe */
+    .stage { position:fixed; inset:0; overflow:hidden; background:#fff; }
+
+    /* We scale the sheet to fit the available space */
+    .sheet {
+      position:absolute;
+      top:0; left:0;
+      transform-origin: top left;
+      border:0;
+      width: 1200px;   /* temporary defaults; JS will override */
+      height: 900px;   /* temporary defaults; JS will override */
+    }
   </style>
 </head>
 <body>
-  <iframe src="https://PMG54.github.io/OKLand-Comparison/MS%20to%20OKL%20Comparison%20to%20html_files/sheet001.htm"></iframe>
+  <div class="stage">
+    <iframe id="sheetFrame"
+      src="MS%20to%20OKL%20Comparison%20to%20html_files/sheet001.htm"
+      class="sheet"
+      scrolling="no"
+      ></iframe>
+  </div>
+
+  <script>
+    // Fit the sheet iframe to the available viewport with scaling.
+    (function () {
+      const frame = document.getElementById('sheetFrame');
+
+      function fit() {
+        const vw = window.innerWidth;
+        const vh = window.innerHeight;
+
+        // These must match the *actual* pixel size of the sheet content.
+        // We'll start with a safe guess and then refine if needed.
+        // If you want perfect fit, tell me your exact sheet width/height and I’ll lock it.
+        const contentW = 1400;
+        const contentH = 900;
+
+        const s = Math.min(vw / contentW, vh / contentH);
+
+        frame.style.width  = contentW + 'px';
+        frame.style.height = contentH + 'px';
+        frame.style.transform = 'scale(' + s + ')';
+      }
+
+      window.addEventListener('resize', fit, { passive:true });
+      fit();
+    })();
+  </script>
 </body>
 </html>
