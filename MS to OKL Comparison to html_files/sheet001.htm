@@ -24,8 +24,9 @@ href="../MS%20to%20OKL%20Comparison%20to%20html.htm">
 	
 <style>
   html, body { margin:0 !important; padding:0 !important; overflow:hidden !important; }
+  /* Wrapper we will scale */
+  #__sheetScaleRoot { transform-origin: top left; }
 </style>
-
 </head>
 
 <body link="#467886" vlink="#96607D">
@@ -236,59 +237,54 @@ href="../MS%20to%20OKL%20Comparison%20to%20html.htm">
 </table>
 <script>
 (function () {
-  function wrapTable() {
-    // Find the first table (Excel export usually uses one main table)
-    var tbl = document.querySelector("table");
-    if (!tbl) return null;
+  function ensureWrap() {
+    if (document.getElementById("__sheetScaleRoot")) return;
 
-    // If already wrapped, return wrapper
-    if (tbl.parentElement && tbl.parentElement.id === "sheetScaleWrap") {
-      return tbl.parentElement;
+    var root = document.createElement("div");
+    root.id = "__sheetScaleRoot";
+
+    // Move ALL body children into root
+    while (document.body.firstChild) {
+      root.appendChild(document.body.firstChild);
     }
-
-    // Create wrapper and move table into it
-    var wrap = document.createElement("div");
-    wrap.id = "sheetScaleWrap";
-    wrap.style.position = "relative";
-    wrap.style.transformOrigin = "top left";
-    wrap.style.width = "fit-content";
-
-    tbl.parentNode.insertBefore(wrap, tbl);
-    wrap.appendChild(tbl);
-
-    return wrap;
+    document.body.appendChild(root);
   }
 
   function fitToWidth() {
-    var wrap = wrapTable();
-    if (!wrap) return;
+    ensureWrap();
 
-    // Measure table width at natural size
-    wrap.style.transform = "scale(1)";
-    var tableWidth = wrap.getBoundingClientRect().width;
+    var root = document.getElementById("__sheetScaleRoot");
+    if (!root) return;
 
-    // Available viewport width (inside the iframe)
+    // Reset scale to measure natural width
+    root.style.transform = "scale(1)";
+
+    // Excel pages can have extra whitespace; scrollWidth is the safest
+    var contentW = Math.max(
+      document.body.scrollWidth,
+      document.documentElement.scrollWidth,
+      root.scrollWidth
+    );
+
     var vw = document.documentElement.clientWidth;
 
-    // Scale DOWN only (never upscale above 1)
-    var s = Math.min(1, vw / tableWidth);
+    // Scale down only
+    var s = Math.min(1, vw / contentW);
 
-    wrap.style.transform = "scale(" + s + ")";
+    root.style.transform = "scale(" + s + ")";
   }
 
-  // Run after layout settles
   window.addEventListener("load", fitToWidth);
   window.addEventListener("resize", function () {
-    // Debounce to avoid jitter while resizing
     clearTimeout(window.__fitSheetT);
-    window.__fitSheetT = setTimeout(fitToWidth, 50);
+    window.__fitSheetT = setTimeout(fitToWidth, 60);
   });
-
 })();
 </script>
 </body>
 
 </html>
+
 
 
 
